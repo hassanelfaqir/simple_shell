@@ -21,7 +21,7 @@ char *r_line(void)
 
 	read = getline(&line, &len, stdin);
 
-	if (!read)
+	if (read == -1)
 	{
 		free(line), line =NULL;
 		return (NULL);

@@ -22,7 +22,7 @@ char *_strcat(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 void free_arry(char **ar);
 char *r_line(void);
-char *_strdup(char *str);
+char *_strdup(const char *str);
 char *_getenv(char *vall);
 char *get_path(char *cmd);
 char *intToString(int num);

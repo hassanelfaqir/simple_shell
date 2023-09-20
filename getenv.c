@@ -13,7 +13,7 @@ char *_getenv(char *val)
 	char *key;
 	char *result;
 	char *dup;
-	int i;
+	int i = 0;
 
 	while (environ[i])
 	{

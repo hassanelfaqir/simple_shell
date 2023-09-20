@@ -33,7 +33,10 @@ int main(int ac, char *argv[])
 
 		cmmd = tokenizer(line);
 		if (_strcmp(cmmd[0], "exit") == 0)
-			exit(0);
+		{
+			free_arry(cmmd);
+			exit(sts);
+		}
 
 		if (!cmmd)
 			continue;

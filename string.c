@@ -98,29 +98,30 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * _strdup - duplicate to new memory space location
- * @str: char
- * Return: 0
+ * _strdup - Duplicates a string.
+ * @str: The string to duplicate.
+ *
+ * Return: Pointer to the newly duplicated string, or NULL if memory allocation fails.
  */
 
-char *_strdup(char *str)
+char *_strdup(const char *str)
 {
-	char *aaa;
-	int i, r = 0;
+	char *dup_str;
+	size_t len;
 
 	if (str == NULL)
+	{
 		return (NULL);
-	i = 0;
-	while (str[i] != '\0')
-		i++;
+	}
 
-	aaa = malloc(sizeof(char) * (i + 1));
+	len = strlen(str) + 1;
+	dup_str = malloc(len);
 
-	if (aaa == NULL)
+	if (dup_str == NULL) 
+	{
 		return (NULL);
-
-	for (r = 0; str[r]; r++)
-		aaa[r] = str[r];
-
-	return (aaa);
+	}
+	strcpy(dup_str, str);
+	return (dup_str);
 }
+
