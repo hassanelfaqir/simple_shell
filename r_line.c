@@ -23,7 +23,7 @@ char *r_line(void)
 
 	if (read == -1)
 	{
-		free(line), line =NULL;
+		free(line), line = NULL;
 		return (NULL);
 	}
 	return (line);

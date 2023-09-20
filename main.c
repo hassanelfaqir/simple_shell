@@ -26,7 +26,7 @@ int main(int ac, char *argv[])
 		if (line == NULL)
 		{
 			if (isatty(STDIN_FILENO))
-				write(STDOUT_FILENO,"\n", 1);
+				write(STDOUT_FILENO, "\n", 1);
 			return (sts);
 		}
 		index++;
@@ -34,7 +34,7 @@ int main(int ac, char *argv[])
 		cmmd = tokenizer(line);
 
 		if (cmmd == NULL)
-                        continue;
+			continue;
 
 		if (_strcmp(cmmd[0], "exit") == 0)
 		{

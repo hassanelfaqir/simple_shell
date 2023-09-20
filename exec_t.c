@@ -26,7 +26,7 @@ int _exec(char **cmd, char **argv, int index)
 	{
 		if (execve(f_cmd, cmd, environ) == -1)
 		{
-			free(f_cmd), f_cmd =NULL;
+			free(f_cmd), f_cmd = NULL;
 			free_arry(cmd);
 		}
 	}

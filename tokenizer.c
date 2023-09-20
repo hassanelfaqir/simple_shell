@@ -13,9 +13,9 @@ char **tokenizer(char *line)
 	char **cmd = NULL;
 	int token_count = 0;
 	int i = 0;
-	
+
 	if (!line)
-		return(NULL);
+		return (NULL);
 
 	tmp = _strdup(line);
 	token = strtok(tmp, DELIM);

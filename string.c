@@ -101,7 +101,7 @@ int _strcmp(char *s1, char *s2)
  * _strdup - Duplicates a string.
  * @str: The string to duplicate.
  *
- * Return: Pointer to the newly duplicated string, or NULL if memory allocation fails.
+ * Return: Pointer to the newly duplicated string, or NULL if memory allocation
  */
 
 char *_strdup(const char *str)
@@ -117,7 +117,7 @@ char *_strdup(const char *str)
 	len = strlen(str) + 1;
 	dup_str = malloc(len);
 
-	if (dup_str == NULL) 
+	if (dup_str == NULL)
 	{
 		return (NULL);
 	}
