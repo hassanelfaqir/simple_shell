@@ -17,7 +17,7 @@ int main(int ac, char *argv[])
 	char *line = NULL;
 	char **cmmd = NULL;
 	int index = 0;
-	int sts = 0;
+	int sts;
 	(void)ac; /* Suppress unused argument warning */
 
 	while (1)
@@ -32,14 +32,15 @@ int main(int ac, char *argv[])
 		index++;
 
 		cmmd = tokenizer(line);
+
+		if (cmmd == NULL)
+                        continue;
+
 		if (_strcmp(cmmd[0], "exit") == 0)
 		{
 			free_arry(cmmd);
 			exit(sts);
 		}
-
-		if (!cmmd)
-			continue;
 
 		sts = _exec(cmmd, argv, index);
 	}
